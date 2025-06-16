@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  font-family: Eurostile, sans-serif;
+  padding: 0;
+}
+
+html { 
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-width: none; /* For Firefox */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1A1818;
+  position: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  background-color: #ece7e1;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  animation: appear1 1s ease-in-out 1s both;
+}
+
+.aside {
+  position: fixed;
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100vh;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: small;
+  left: -660px;
+  z-index: 999;
+}
+
+hr {
+  border: 0.6px solid black;
+  margin-right: 0px;
+  margin-left: -100px;
+}
+
+.flex0 {
+  display: flex;
+  align-items: center;
+  margin-left: -50px;
+}
+
+.flex {
+  display: flex;
+  margin-left: 100px;
+  letter-spacing: 1px;
+}
+.flex1 {
+  display: flex;
+}
+
+.D {
+  margin-right: 30px;
+  margin-left: 0px;
+}
+
+.T {
+  margin-right: 30px;
+  margin-left: 0px;
+}
+
+.L {
+  margin-right: 30px;
+  margin-left: 0px;
+}
+
+.main {
+  margin-left: 200px;
+  margin-top: 400px;
+  position: fixed;
+  line-height: 30px;
+}
+
+h3 {
+  font-size: x-large;
+  font-weight: 400;
+}
+
+.special {
+  border-bottom: 2px solid black;
+  transition: 0.6s;
+}
+
+.special:hover {
+  text-decoration: line-through;
+  border: none;
+  cursor: pointer;
+}
+
+.main1 {
+  font-size: 70px;
+  margin-left: 700px;
+  margin-top: -50px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.main1:hover {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  cursor: pointer;
+}
+
+
+.words {
+  transition: 0.5s;
+}
+
+.words:hover {
+  margin-left: 20px;
+}
+
+.main2 {
+  background-color: #1A1818;
+  color: #ECE7E1;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 1000px;
+  position: absolute;
+  animation: appear 2s ease-in-out 3s forwards;
+  transform: translateY(-200px);
+}
+
+.slide {
+  width: 170px;
+  height: 110px;
+  padding: 10px;
+  overflow: hidden;
+  margin: 0px 30px 0px 10px;
+}
+
+#img1 {
+  animation: slides 6s ease-in 2s infinite alternate;
+}
+
+#img2 {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+#img3 {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.move-arrow {
+  transition: 0.5s;
+}
+
+.move-arrow:hover {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@keyframes slides {
+  0% {
+    transform: translateX(0px);
+    margin-right: 0px;
+  }
+
+  50% {
+    transform: translateX(-180px);
+    margin-right: -180px;
+  }
+
+  100% {
+    transform: translateX(-355px);
+    margin-right: -355px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);  
+}
+}
+
+@keyframes appear1 {
+  0% {
+    opacity: 1;
+    transform: translateY(-1000px);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);  
+}
+}
